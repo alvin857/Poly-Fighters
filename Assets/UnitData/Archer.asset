@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 265ebc650dc2d4bef8c34c639cd55e5c, type: 3}
-  m_Name: New Unit
+  m_Name: Archer
   m_EditorClassIdentifier: 
   unitName: Archer
   unitIcon: {fileID: 21300000, guid: cb89b305adb26437b9714bc7db5b38f0, type: 3}
   cost: 50
-  unitPrefab: {fileID: 0}
+  unitPrefab: {fileID: 5124539830777914032, guid: 401d9b661302c4f97b9d211f5010b397,
+    type: 3}
   description: A ranged unit that attacks from a distance.
