@@ -50,7 +50,7 @@ public class GridPlacementSystem : MonoBehaviour
     
     public Vector3 GetWorldPosition(int x, int z)
     {
-        return gridOrigin + new Vector3(x * cellSize, 0, z * cellSize);
+        return gridOrigin + new Vector3(x * cellSize, -1, z * cellSize);
     }
     
     public Vector2Int GetGridPosition(Vector3 worldPos)
