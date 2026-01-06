@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 265ebc650dc2d4bef8c34c639cd55e5c, type: 3}
-  m_Name: Archer
+  m_Name: Knight
   m_EditorClassIdentifier: 
   unitName: Archer
-  unitIcon: {fileID: 21300000, guid: 9702dd183db8149529c7b6ce8da716ca, type: 3}
-  cost: 150
-  unitPrefab: {fileID: 5124539830777914032, guid: 401d9b661302c4f97b9d211f5010b397,
-    type: 3}
+  unitIcon: {fileID: 21300000, guid: 0a0750210534b439884c1cb23a3d95a3, type: 3}
+  cost: 200
+  unitPrefab: {fileID: 0}
   description: A ranged unit that attacks from a distance.

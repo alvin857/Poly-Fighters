@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Spearman
   m_EditorClassIdentifier: 
   unitName: Spearman
-  unitIcon: {fileID: 21300000, guid: 7b97e9ebb73984fa584d55353a1aa516, type: 3}
+  unitIcon: {fileID: 21300000, guid: 6ffce0a7319e045968b7d9be248e5d67, type: 3}
   cost: 100
   unitPrefab: {fileID: 2517777511349537841, guid: 465caa4b6ed684ee59c70d4eb47401d5,
     type: 3}
