@@ -472,7 +472,11 @@ MonoBehaviour:
   attackDamage: 10
   attackCooldown: 1
   animator: {fileID: 1038873649264962924}
-  healthBarPrefab: {fileID: 0}
+  canBlock: 0
+  blockChance: 0.3
+  blockSparkPrefab: {fileID: 0}
+  healthBarPrefab: {fileID: 1462811363704030460, guid: dd7e15c67298d4694adcb84d0f3295e2,
+    type: 3}
   healthBarOffset: {x: 0, y: 4, z: 0}
   healthBarSmoothSpeed: 5
 --- !u!1 &3327112712179118168
