@@ -1812,6 +1812,7 @@ GameObject:
   - component: {fileID: 1191573844}
   - component: {fileID: 1191573843}
   - component: {fileID: 1191573842}
+  - component: {fileID: 1191573845}
   m_Layer: 5
   m_Name: Gold?
   m_TagString: Untagged
@@ -1935,9 +1936,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 58.5, y: -160.65}
+  m_AnchoredPosition: {x: 58.5, y: -162.1}
   m_SizeDelta: {x: 300, y: 60}
   m_Pivot: {x: 0, y: 1}
+--- !u!114 &1191573845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191573841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37aa0160fa874453868fdf41bc515ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldText: {fileID: 1191573842}
+  spendColor: {r: 1, g: 0.4, b: 0.4, a: 1}
+  shiftDuration: 0.15
 --- !u!4 &1220641351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c2391e8a6bdf5424194b61e41952a40a,
