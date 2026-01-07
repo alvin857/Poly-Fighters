@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1339375670696628363}
   - component: {fileID: 3149930236793502797}
   m_Layer: 0
-  m_Name: BlueKnight
+  m_Name: Pre_BlueKnight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
   maxHealth: 150
   moveSpeed: 3
   rotationSpeed: 8
-  attackRange: 3
+  attackRange: 2
   attackDamage: 10
   attackCooldown: 1
   animator: {fileID: 6268214076925659005}

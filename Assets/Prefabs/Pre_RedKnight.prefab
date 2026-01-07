@@ -49,7 +49,7 @@ MonoBehaviour:
   maxHealth: 200
   moveSpeed: 3
   rotationSpeed: 8
-  attackRange: 3
+  attackRange: 2
   attackDamage: 10
   attackCooldown: 1
   animator: {fileID: 6090922184210231122}

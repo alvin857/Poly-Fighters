@@ -122,7 +122,7 @@ public class UnitAI : MonoBehaviour
 
         if (Camera.main != null)
         {
-            healthBarTransform.LookAt(Camera.main.transform);
+            healthBarTransform.forward = Camera.main.transform.forward;
         }
     }
 

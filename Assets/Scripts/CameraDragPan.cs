@@ -5,6 +5,12 @@ public class CameraDragPan : MonoBehaviour
     [Header("Pan Settings")]
     public float panSpeed = 0.5f;
 
+    [Header("Pan Constraints")]
+    public float minX = -50f;
+    public float maxX = 50f;
+    public float minZ = -50f;
+    public float maxZ = 50f;
+
     private Vector3 lastMousePosition;
 
     void Update()
@@ -18,7 +24,6 @@ public class CameraDragPan : MonoBehaviour
         {
             Vector3 mouseDelta = Input.mousePosition - lastMousePosition;
 
-            // Invert to make dragging feel natural
             Vector3 move = new Vector3(
                 -mouseDelta.x * panSpeed * Time.deltaTime,
                 0f,
@@ -27,7 +32,19 @@ public class CameraDragPan : MonoBehaviour
 
             transform.Translate(move, Space.World);
 
+            ClampPosition();
+
             lastMousePosition = Input.mousePosition;
         }
+    }
+
+    void ClampPosition()
+    {
+        Vector3 pos = transform.position;
+
+        pos.x = Mathf.Clamp(pos.x, minX, maxX);
+        pos.z = Mathf.Clamp(pos.z, minZ, maxZ);
+
+        transform.position = pos;
     }
 }
