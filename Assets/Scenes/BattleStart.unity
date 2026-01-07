@@ -273,6 +273,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panSpeed: 5
+  zoomSpeed: 20
+  minZoomY: 10
+  maxZoomY: 10
   minX: -50
   maxX: 50
   minZ: 0

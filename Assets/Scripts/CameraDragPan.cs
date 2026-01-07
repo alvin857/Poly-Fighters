@@ -5,6 +5,11 @@ public class CameraDragPan : MonoBehaviour
     [Header("Pan Settings")]
     public float panSpeed = 0.5f;
 
+    [Header("Zoom Settings")]
+    public float zoomSpeed = 20f;
+    public float minZoomY = 10f;
+    public float maxZoomY = 40f;
+
     [Header("Pan Constraints")]
     public float minX = -50f;
     public float maxX = 50f;
@@ -14,6 +19,13 @@ public class CameraDragPan : MonoBehaviour
     private Vector3 lastMousePosition;
 
     void Update()
+    {
+        HandlePan();
+        HandleZoom();
+        ClampPosition();
+    }
+
+    void HandlePan()
     {
         if (Input.GetMouseButtonDown(1))
         {
@@ -31,10 +43,18 @@ public class CameraDragPan : MonoBehaviour
             );
 
             transform.Translate(move, Space.World);
-
-            ClampPosition();
-
             lastMousePosition = Input.mousePosition;
+        }
+    }
+
+    void HandleZoom()
+    {
+        float scroll = Input.mouseScrollDelta.y;
+
+        if (Mathf.Abs(scroll) > 0.01f)
+        {
+            Vector3 zoomMove = transform.forward * scroll * zoomSpeed;
+            transform.position += zoomMove;
         }
     }
 
@@ -44,6 +64,7 @@ public class CameraDragPan : MonoBehaviour
 
         pos.x = Mathf.Clamp(pos.x, minX, maxX);
         pos.z = Mathf.Clamp(pos.z, minZ, maxZ);
+        pos.y = Mathf.Clamp(pos.y, minZoomY, maxZoomY);
 
         transform.position = pos;
     }
