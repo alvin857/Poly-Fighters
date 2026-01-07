@@ -757,6 +757,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 2df72ec125264584faa40cb1beef0481, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: d4afaeb55ca964b94bda902281787dc3,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1086,8 +1091,8 @@ MonoBehaviour:
   gridOrigin: {x: 0, y: 0, z: 0}
   gridMaterial: {fileID: 2100000, guid: 83dd26a6ee04e479c876c11e1d6ed229, type: 2}
   availableColor: {r: 0, g: 0.8773585, b: 0, a: 0.3}
-  occupiedColor: {r: 0.8490566, g: 0.33241364, b: 0.33241364, a: 0.3}
-  hoverColor: {r: 0.18867925, g: 0.47280797, b: 0.754717, a: 0.5}
+  occupiedColor: {r: 0, g: 0.4056604, b: 0.022676649, a: 0.3}
+  hoverColor: {r: 0.0071456432, g: 1, b: 0, a: 0.5}
 --- !u!4 &604044452
 Transform:
   m_ObjectHideFlags: 0
