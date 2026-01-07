@@ -23,6 +23,12 @@ public class UnitAI : MonoBehaviour
     [Header("Animation")]
     public Animator animator;
 
+    [Header("Blocking")]
+    public bool canBlock = false;
+    [Range(0f, 1f)]
+    public float blockChance = 0.3f;
+    public GameObject blockSparkPrefab;
+
     [Header("Health Bar")]
     public GameObject healthBarPrefab;
     public Vector3 healthBarOffset = new Vector3(0, 4f, 0);
@@ -38,6 +44,9 @@ public class UnitAI : MonoBehaviour
 
     void Start()
     {
+        // Safety: auto-find animator if not assigned
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
 
         currentHealth = maxHealth;
         displayedHealth = maxHealth;
@@ -113,7 +122,7 @@ public class UnitAI : MonoBehaviour
 
         if (Camera.main != null)
         {
-            healthBarTransform.LookAt(Camera.main.transform);
+            healthBarTransform.forward = Camera.main.transform.forward;
         }
     }
 
@@ -183,9 +192,17 @@ public class UnitAI : MonoBehaviour
         animator.SetBool("isWalking", false);
     }
 
-    // ---------------- DAMAGE ----------------
+    // ---------------- DAMAGE & BLOCKING ----------------
     public void TakeDamage(float damage)
     {
+        bool blocked = TryBlock();
+
+        if (blocked)
+        {
+            damage *= 0.5f; // half damage on block
+            SpawnBlockSpark();
+        }
+
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
 
@@ -197,4 +214,21 @@ public class UnitAI : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    bool TryBlock()
+    {
+        if (!canBlock) return false;
+
+        return Random.value <= blockChance;
+    }
+
+    void SpawnBlockSpark()
+{
+    if (blockSparkPrefab == null) return;
+
+    Vector3 sparkPos = transform.position + Vector3.up * 1.5f;
+    GameObject spark = Instantiate(blockSparkPrefab, sparkPos, Quaternion.identity);
+
+    Destroy(spark, 1f);
+}
 }

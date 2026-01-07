@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265ebc650dc2d4bef8c34c639cd55e5c, type: 3}
+  m_Name: Knight
+  m_EditorClassIdentifier: 
+  unitName: Knight
+  unitIcon: {fileID: 21300000, guid: 0a0750210534b439884c1cb23a3d95a3, type: 3}
+  cost: 200
+  unitPrefab: {fileID: 6421647080652661174, guid: dc087a7429e6a4d069e9fbfa69da40c9,
+    type: 3}
+  description: A ranged unit that attacks from a distance.
