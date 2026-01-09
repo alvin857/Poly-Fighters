@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265ebc650dc2d4bef8c34c639cd55e5c, type: 3}
   m_Name: King
   m_EditorClassIdentifier: 
-  unitName: Archer
-  unitIcon: {fileID: 0}
-  cost: 50
-  unitPrefab: {fileID: 0}
+  unitName: King
+  unitIcon: {fileID: 21300000, guid: a0bf3198bf059427b93d8565d1ac9f91, type: 3}
+  cost: 500
+  unitPrefab: {fileID: 6441777685156977825, guid: 7b029dafc67e94ca78e0efb0fa373f60,
+    type: 3}
   description: A ranged unit that attacks from a distance.

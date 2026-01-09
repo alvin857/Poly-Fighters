@@ -465,12 +465,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  maxHealth: 150
-  moveSpeed: 3
+  maxHealth: 100
+  moveSpeed: 2
   rotationSpeed: 8
   attackRange: 3
-  attackDamage: 10
-  attackCooldown: 1
+  attackDamage: 7
+  attackCooldown: 4
   animator: {fileID: 1038873649264962924}
   canBlock: 0
   blockChance: 0.3

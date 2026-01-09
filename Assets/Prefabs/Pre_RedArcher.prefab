@@ -1331,11 +1331,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  maxHealth: 100
+  maxHealth: 75
   moveSpeed: 5
   rotationSpeed: 8
   attackRange: 40
-  attackDamage: 10
+  attackDamage: 20
   attackCooldown: 2
   animator: {fileID: 9213183397272398687}
   canBlock: 0

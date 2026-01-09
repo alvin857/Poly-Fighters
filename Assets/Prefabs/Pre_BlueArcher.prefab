@@ -46,11 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  maxHealth: 200
+  maxHealth: 75
   moveSpeed: 5
   rotationSpeed: 8
   attackRange: 40
-  attackDamage: 10
+  attackDamage: 20
   attackCooldown: 2
   animator: {fileID: 6963013304747824837}
   canBlock: 0

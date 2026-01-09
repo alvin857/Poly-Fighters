@@ -22,6 +22,7 @@ public class UnitAI : MonoBehaviour
 
     [Header("Animation")]
     public Animator animator;
+    
 
     [Header("Blocking")]
     public bool canBlock = false;
