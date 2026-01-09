@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  maxHealth: 200
+  maxHealth: 150
   moveSpeed: 3
   rotationSpeed: 8
   attackRange: 3
