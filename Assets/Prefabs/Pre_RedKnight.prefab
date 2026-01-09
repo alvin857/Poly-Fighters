@@ -57,7 +57,8 @@ MonoBehaviour:
   blockChance: 0.5
   blockSparkPrefab: {fileID: 4685619828569943910, guid: d0aa83243e77e44a1ba512bdd04e54a9,
     type: 3}
-  healthBarPrefab: {fileID: 0}
+  healthBarPrefab: {fileID: 1462811363704030460, guid: dd7e15c67298d4694adcb84d0f3295e2,
+    type: 3}
   healthBarOffset: {x: 0, y: 4, z: 0}
   healthBarSmoothSpeed: 5
 --- !u!1001 &276016727061395179

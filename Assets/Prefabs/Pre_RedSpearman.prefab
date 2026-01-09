@@ -718,14 +718,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 1
-  maxHealth: 200
-  moveSpeed: 3
+  maxHealth: 100
+  moveSpeed: 2
   rotationSpeed: 8
   attackRange: 3
-  attackDamage: 10
-  attackCooldown: 1
+  attackDamage: 7
+  attackCooldown: 4
   animator: {fileID: 2895789330132521453}
-  healthBarPrefab: {fileID: 0}
+  canBlock: 0
+  blockChance: 0.3
+  blockSparkPrefab: {fileID: 0}
+  healthBarPrefab: {fileID: 1462811363704030460, guid: dd7e15c67298d4694adcb84d0f3295e2,
+    type: 3}
   healthBarOffset: {x: 0, y: 4, z: 0}
   healthBarSmoothSpeed: 5
 --- !u!1 &6262197281105514162
