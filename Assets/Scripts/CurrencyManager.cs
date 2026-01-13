@@ -10,13 +10,10 @@ public class CurrencyManager : MonoBehaviour
 
     private int currentCurrency;
 
-    // Fires whenever currency value changes (any reason)
     public event Action<int> OnCurrencyChanged;
 
-    // Fires only when currency is spent
     public event Action<int> OnCurrencySpent;
 
-    // Fires only when currency is gained
     public event Action<int> OnCurrencyGained;
 
     void Awake()

@@ -11,12 +11,10 @@ public class GoldTextRedShift : MonoBehaviour
     public Color spendColor = new Color(1f, 0.4f, 0.4f);
     public float shiftDuration = 0.15f;
 
-    // Exact cached gradient values
     private VertexGradient cachedGradient;
 
     void Awake()
     {
-        // Cache every channel explicitly (manual gradients included)
         cachedGradient = new VertexGradient(
             goldText.colorGradient.topLeft,
             goldText.colorGradient.topRight,
@@ -54,7 +52,6 @@ public class GoldTextRedShift : MonoBehaviour
 
     IEnumerator RedShift()
     {
-        // Disable gradient and flash red
         goldText.enableVertexGradient = false;
 
         Color startColor = goldText.color;
@@ -67,9 +64,8 @@ public class GoldTextRedShift : MonoBehaviour
             yield return null;
         }
 
-        // Restore gradient EXACTLY
         goldText.enableVertexGradient = true;
         goldText.colorGradient = cachedGradient;
-        goldText.color = Color.white; // required by TMP when using gradients
+        goldText.color = Color.white;
     }
 }

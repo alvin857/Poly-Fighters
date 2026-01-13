@@ -10,6 +10,12 @@ namespace FWC
 
         [SerializeField] AudioSource source;
 
+        private Vector3 originalScale;
+
+        void Awake()
+        {
+            originalScale = transform.localScale;
+        }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
@@ -23,13 +29,13 @@ namespace FWC
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = originalScale;
 
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = originalScale;
         }
     }
 

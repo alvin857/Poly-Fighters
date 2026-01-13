@@ -45,7 +45,6 @@ public class UnitAI : MonoBehaviour
 
     void Start()
     {
-        // Safety: auto-find animator if not assigned
         if (animator == null)
             animator = GetComponentInChildren<Animator>();
 
@@ -104,7 +103,6 @@ public class UnitAI : MonoBehaviour
         }
     }
 
-    // ---------------- HEALTH BAR ----------------
     void UpdateHealthBar()
     {
         if (healthBarFill == null || healthBarTransform == null) return;
@@ -127,7 +125,6 @@ public class UnitAI : MonoBehaviour
         }
     }
 
-    // ---------------- TARGETING ----------------
     void AcquireTarget()
     {
         UnitAI[] units = FindObjectsOfType<UnitAI>();
@@ -150,7 +147,6 @@ public class UnitAI : MonoBehaviour
         target = closestEnemy;
     }
 
-    // ---------------- ROTATION ----------------
     void RotateTowardsTarget()
     {
         Vector3 dir = target.transform.position - transform.position;
@@ -166,13 +162,11 @@ public class UnitAI : MonoBehaviour
         );
     }
 
-    // ---------------- MOVEMENT ----------------
     void MoveForward()
     {
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
     }
 
-    // ---------------- COMBAT ----------------
     void TryAttack()
     {
         if (Time.time - lastAttackTime < attackCooldown) return;
@@ -182,7 +176,6 @@ public class UnitAI : MonoBehaviour
         target.TakeDamage(attackDamage);
     }
 
-    // ---------------- ANIMATION HELPERS ----------------
     void SetWalking()
     {
         animator.SetBool("isWalking", true);
@@ -193,14 +186,13 @@ public class UnitAI : MonoBehaviour
         animator.SetBool("isWalking", false);
     }
 
-    // ---------------- DAMAGE & BLOCKING ----------------
     public void TakeDamage(float damage)
     {
         bool blocked = TryBlock();
 
         if (blocked)
         {
-            damage *= 0.5f; // half damage on block
+            damage *= 0.5f;
             SpawnBlockSpark();
         }
 
@@ -224,12 +216,12 @@ public class UnitAI : MonoBehaviour
     }
 
     void SpawnBlockSpark()
-{
-    if (blockSparkPrefab == null) return;
+    {
+        if (blockSparkPrefab == null) return;
 
-    Vector3 sparkPos = transform.position + Vector3.up * 1.5f;
-    GameObject spark = Instantiate(blockSparkPrefab, sparkPos, Quaternion.identity);
+        Vector3 sparkPos = transform.position + Vector3.up * 1.5f;
+        GameObject spark = Instantiate(blockSparkPrefab, sparkPos, Quaternion.identity);
 
-    Destroy(spark, 1f);
-}
+        Destroy(spark, 1f);
+    }
 }
