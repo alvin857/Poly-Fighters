@@ -69,10 +69,6 @@ public class UnitAI : MonoBehaviour
                 healthBarFill.fillMethod = Image.FillMethod.Horizontal;
                 healthBarFill.fillAmount = 1f;
             }
-            else
-            {
-                Debug.LogError("HealthBarPrefab missing Fill child.");
-            }
         }
     }
 
